@@ -4,10 +4,7 @@ import { ref, watch } from 'vue'
 import Container from '@/components/Container.vue'
 
 // 初始化
-const titleList = ref([
-  { title: '01 http 和 https.md', id: 1648798751030 },
-  { title: '02 本地存储.md', id: 1648798755026 },
-])
+const titleList = ref([])
 const txt = ref('')
 const active = ref('')
 
@@ -24,7 +21,7 @@ titleList.value[0] && linkTo(titleList.value[0]['title'])
 </script>
 
 <template>
-  <Container>
+  <Container :noData="true">
     <template #aside>
       <div v-for="item in titleList" :key="item.title" class="item" @click="linkTo(item.title)" :class="active === item.title && 'active'">{{ item.title }}</div>
     </template>

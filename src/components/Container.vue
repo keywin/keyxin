@@ -2,7 +2,8 @@
 import { ref } from 'vue'
 defineProps<{ 
   msg?: string,
-  asideList?: Array
+  asideList?: Array,
+  noData?: Boolean
 }>()
 
 const isShowAside = ref(false)
@@ -15,15 +16,18 @@ function isShowAsideClick() {
 <template>
   <div class="Container">
     <div class="content">
-      <div class="dingwei" @click="isShowAsideClick()"></div>
-      <main>
-        <slot name="main"></slot>
-      </main>
-      <aside :class="isShowAside && 'active'">
-        <div class="aside">
-          <slot name="aside"></slot>
-        </div>
-      </aside>
+      <div class="noData" v-if="noData"></div>
+      <template v-if="!noData">
+        <div class="dingwei" @click="isShowAsideClick()"></div>
+        <main>
+          <slot name="main"></slot>
+        </main>
+        <aside :class="isShowAside && 'active'">
+          <div class="aside">
+            <slot name="aside"></slot>
+          </div>
+        </aside>
+      </template>
     </div>
   </div>
 </template>
@@ -37,8 +41,16 @@ function isShowAsideClick() {
     display: flex;
     position: relative;
     max-width: 1024px;
+    min-height: 100vh;
     margin: 0 auto;
     // background: #e5cfdc;
+    .noData{
+      flex: 1;
+      display: flex;
+      height: 100vh;
+      background: url(@/assets/imgs/noData.png) no-repeat center;
+      background-size: 300px;
+    }
     .dingwei{
       display: none;
     }

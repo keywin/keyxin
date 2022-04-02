@@ -6,7 +6,6 @@ import Container from '@/components/Container.vue'
 // 初始化
 const titleList = ref([
   { title: '01 数组对象去重.md', id: 1648802019068 },
-  { title: '02 本地存储.md', id: 1648798755026 },
 ])
 const txt = ref('')
 const active = ref('')
