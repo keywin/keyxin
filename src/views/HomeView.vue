@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Header from '@/views/layout/Header.vue'
 import Nav from '@/views/layout/Nav.vue'
 </script>
 
@@ -6,7 +7,10 @@ import Nav from '@/views/layout/Nav.vue'
   <main>
     <Nav></Nav>
     <!-- <Transition> -->
-      <router-view></router-view>
+      <div class="main">
+        <!-- <Header></Header> -->
+        <router-view></router-view>
+      </div>
     <!-- </Transition> -->
   </main>
 </template>
@@ -16,6 +20,12 @@ main{
   display: flex;
   height: 100vh;
   background: #f9f9f9;
+  .main{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .v-enter-active, .v-leave-active {

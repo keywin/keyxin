@@ -36,7 +36,7 @@ function isShowAsideClick() {
 .Container{
   flex: 1;
   background: #f9f9f9;
-  overflow-y: auto;
+  overflow-y: scroll;
   .content{
     display: flex;
     position: relative;
@@ -59,6 +59,26 @@ function isShowAsideClick() {
       // margin: 0 auto;
       background: #fff;
       overflow-y: auto;
+      /deep/ .titleBlock{
+        padding: 5px 32px;
+        .title{
+          height: 42px;
+          line-height: 42px;
+          color: #333;
+          font-weight: bold;
+          font-size: 32px;
+        }
+        .descr{
+          font-size: 14px;
+          margin-top: 5px;
+          .auth{
+            color: #515767;
+          }
+          .time{
+            color: #8a919f;
+          }
+        }
+      }
     }
     aside{
       width: 200px;

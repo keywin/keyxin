@@ -5,7 +5,7 @@ import Container from '@/components/Container.vue'
 
 // 初始化
 const titleList = ref([
-  { title: '01 数组对象去重.md', id: 1648802019068 },
+  { title: '01 数组对象去重.md', id: 1648802019068, auth: 'keywin' },
 ])
 const txt = ref('')
 const active = ref('')
@@ -41,6 +41,13 @@ titleList.value[0] && linkTo(titleList.value[0]['title'])
       <div v-for="item in titleList" :key="item['title']" class="item" @click="linkTo(item['title'])" :class="active === item['title'] && 'active'">{{ item['title'] }}</div>
     </template>
     <template v-slot:main>
+      <div class="titleBlock">
+        <div class="title">{{ titleList.filter(item => item.title === active)[0]['title'] }}</div>
+        <div class="descr">
+          <div class="auth">{{ titleList.filter(item => item.title === active)[0]['auth'] }}</div>
+          <div class="time">{{ $dayjs(titleList.filter(item => item.title === active)[0]['id']).format('YYYY-MM-DD HH:mm:ss') }}</div>
+        </div>
+      </div>
       <v-md-preview :text="txt"></v-md-preview>
     </template>
   </Container>

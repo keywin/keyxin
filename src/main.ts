@@ -17,6 +17,7 @@ import hljs from 'highlight.js';
 VMdPreview.use(githubTheme, {
   Hljs: hljs,
 });
+import dayjs from 'dayjs'
 
 const app = createApp(App)
 
@@ -26,5 +27,8 @@ app.use(router)
 app.use(VMdPreview);
 
 // app.use(mavonEditor)
+
+app.config.globalProperties.$dayjs = dayjs
+
 
 app.mount('#app')
