@@ -132,13 +132,18 @@ function isShowAsideClick() {
   aside{
     right: -300px !important;
     transition: right .3s;
+    .aside{
+      height: 100vh;
+      max-height: 100vh !important;
+      top: 0 !important;
+      box-shadow: 0 8px 10px -5px rgb(0 0 0 / 20%), 0 16px 24px 2px rgb(0 0 0 / 14%), 0 6px 30px 5px rgb(0 0 0 / 12%);
+    }
   }
   aside.active{
     top: 0 !important;
     right: 0 !important;
     .aside{
-      right: 10px;
-      top: 0 !important;
+      right: 0;
     }
   }
 }
