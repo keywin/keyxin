@@ -78,8 +78,10 @@ function linkTo (item='') {
       /deep/ .titleBlock{
         padding: 5px 32px;
         .title{
-          height: 42px;
-          line-height: 42px;
+          min-height: 42px;
+          line-height: 35px;
+          word-wrap: break-word;
+          word-break: break-all;
           color: #333;
           font-weight: bold;
           font-size: 32px;
