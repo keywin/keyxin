@@ -28,7 +28,7 @@ onMounted(() => {
 <li v-for="item in 5" :key="item" ref="itemsRef"></li>
 ```
 
-#### ref可用与子组件
+#### ref可用于子组件
 
 ```js
 <script setup>
@@ -45,4 +45,11 @@ onMounted(() => {
 <template>
   <Child ref="child" />
 </template>
+```
+
+#### 父组件直接访问子组件
+
+```js
+// 子组件
+const c_a = 
 ```

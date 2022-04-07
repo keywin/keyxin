@@ -1,10 +1,17 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 
-const c = ref('cccc')
+const a = 1
+const b = ref(2)
 
+defineExpose({
+  a,
+  b
+})
 </script>
 
 <template>
-  children_
+  <div>
+    123
+  </div>
 </template>
