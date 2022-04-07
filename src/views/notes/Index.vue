@@ -5,10 +5,12 @@ import Container from '@/components/Container.vue'
 
 // 初始化
 const titleList = ref([
+  { title: '06 vue3-模板ref.md', id: 1649327576915, auth: 'keywin' },
+  { title: '05 vue3-watch.md', id: 1649319949012, auth: 'keywin' },
   { title: '04 setter.md', id: 1649301260320, auth: 'keywin' },
   { title: '03 getter.md', id: 1649227458790, auth: 'keywin' },
-  { title: '01 http 和 https.md', id: 1648798751030, auth: 'keywin' },
   { title: '02 本地存储.md', id: 1649231575913, auth: 'keywin' },
+  { title: '01 http 和 https.md', id: 1648798751030, auth: 'keywin' },
   
 ])
 const txt = ref('')
@@ -28,6 +30,13 @@ function linkTo (item='') {
 titleList.value[0] && linkTo(titleList.value[0]['title'])
 
 </script>
+<script lang="ts">
+  window.onload = function(){
+    var oIframe = document.getElementById('iframe');
+    console.log(oIframe)
+    // oIframe.contentWindow.document.body.style.color = 'red';
+  }
+</script>
 
 <template>
   <Container>
@@ -45,6 +54,7 @@ titleList.value[0] && linkTo(titleList.value[0]['title'])
         </div>
       </div>
       <v-md-preview :text="txt"></v-md-preview>
+      <iframe src="https://sfc.vuejs.org/#" frameborder="0" style="margin-bottom: 20px;" width="100%" height="600px" id="iframe"></iframe>
     </template>
   </Container>
 </template>

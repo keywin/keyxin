@@ -1,53 +1,65 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from '@/components/HelloWorld.vue'
 
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 
-const list = ref(['张三', '李四', '王五', '刘心心'])
-const txt = ref('<p>这是库里面存的带标签的文本这是库里面存的带标签的文本这是库里面存的带标签的文本这是库里面存的带标签的文本这是库里面存的带标签的文本</p>')
+import { Repl, ReplStore } from '@vue/repl'
 
-const lastUser = computed(() => list.value[list.value.length - 1])
+// const list = ref(['张三', '李四', '王五', '刘心心'])
+// const txt = ref('<p>这是库里面存的带标签的文本这是库里面存的带标签的文本这是库里面存的带标签的文本这是库里面存的带标签的文本这是库里面存的带标签的文本</p>')
 
-const myObject = ref({
-  title: 'How to do lists in Vue',
-  author: 'Jane Doe',
-  publishedAt: '2016-04-10'
+// const lastUser = computed(() => list.value[list.value.length - 1])
+
+const x = ref(0)
+const y = ref(0)
+
+// const myObject = ref({
+//   title: 'How to do lists in Vue',
+//   author: 'Jane Doe',
+//   publishedAt: '2016-04-10'
+// })
+
+// list.value = ['刘开开', '山']
+
+// const maodianClick = (id) => {
+//   var dom = document.querySelector(id)
+//   document.documentElement.scrollTop = dom.offsetTop
+// }
+
+
+
+watch([x, () => y.value], ([newX, newY], [ox, oy]) => {
+  console.log(`x is ${ox} and y is ${oy}`)
 })
 
-list.value = ['刘开开', '山']
-
-const maodianClick = (id) => {
-  var dom = document.querySelector(id)
-  document.documentElement.scrollTop = dom.offsetTop
-}
-
-console.log([
-    "                   _ooOoo_",
-    "                  o8888888o",
-    "                  88\" . \"88",
-    "                  (| -_- |)",
-    "                  O\\  =  /O",
-    "               ____/`---'\\____",
-    "             .'  \\\\|     |//  `.",
-    "            /  \\\\|||  :  |||//  \\",
-    "           /  _||||| -:- |||||-  \\",
-    "           |   | \\\\\\  -  /// |   |",
-    "           | \\_|  ''\\---/''  |   |",
-    "           \\  .-\\__  `-`  ___/-. /",
-    "         ___`. .'  /--.--\\  `. . __",
-    "      .\"\" '<  `.___\\_<|>_/___.'  >'\"\".",
-    "     | | :  `- \\`.;`\\ _ /`;.`/ - ` : | |",
-    "     \\  \\ `-.   \\_ __\\ /__ _/   .-` /  /",
-    "======`-.____`-.___\\_____/___.-`____.-'======",
-    "                   `=---='",
-    "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
-    "         佛祖保佑       永无BUG"
-].join('\n'));
+// console.log([
+//     "                   _ooOoo_",
+//     "                  o8888888o",
+//     "                  88\" . \"88",
+//     "                  (| -_- |)",
+//     "                  O\\  =  /O",
+//     "               ____/`---'\\____",
+//     "             .'  \\\\|     |//  `.",
+//     "            /  \\\\|||  :  |||//  \\",
+//     "           /  _||||| -:- |||||-  \\",
+//     "           |   | \\\\\\  -  /// |   |",
+//     "           | \\_|  ''\\---/''  |   |",
+//     "           \\  .-\\__  `-`  ___/-. /",
+//     "         ___`. .'  /--.--\\  `. . __",
+//     "      .\"\" '<  `.___\\_<|>_/___.'  >'\"\".",
+//     "     | | :  `- \\`.;`\\ _ /`;.`/ - ` : | |",
+//     "     \\  \\ `-.   \\_ __\\ /__ _/   .-` /  /",
+//     "======`-.____`-.___\\_____/___.-`____.-'======",
+//     "                   `=---='",
+//     "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+//     "         佛祖保佑       永无BUG"
+// ].join('\n'));
 
 </script>
 
 <template>
+<!-- <input type="number" v-model="x"> -->
+<!-- <input type="number" v-model="y"> -->
   <router-view></router-view>
   <!-- <ul>
     <li v-for="(v, k, i) in myObject" :key="v">
@@ -57,7 +69,6 @@ console.log([
 
   <!-- <div v-for="item of list" :key="item" style="background: red;">{{ item }}</div> -->
 
-  <!-- <header> -->
     <!-- <div>
       <button v-for="item in 30" :key="item" @click="maodianClick('#id-' + item)">{{item}}</button>
     </div>
@@ -67,17 +78,7 @@ console.log([
       </div>
     </template> -->
     <!-- <div>{{ lastUser }}</div> -->
-    <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
 
-    <!-- <div class="wrapper"> -->
-      <!-- <HelloWorld msg="You did it!" class="bazss" /> -->
-
-      <!-- <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav> -->
-    <!-- </div> -->
-  <!-- </header> -->
 
   <!-- <RouterView /> -->
 </template>
