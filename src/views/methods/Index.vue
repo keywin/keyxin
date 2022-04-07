@@ -38,7 +38,9 @@ titleList.value[0] && linkTo(titleList.value[0]['title'])
 <template>
   <Container>
     <template #aside>
-      <div v-for="item in titleList" :key="item['title']" class="item" @click="linkTo(item['title'])" :class="active === item['title'] && 'active'">{{ item['title'] }}</div>
+      <div v-for="item in titleList" :key="item['title']" class="item" @click="linkTo(item['title'])" :class="active === item['title'] && 'active'">
+      <span>{{ item['title'] }}</span>
+    </div>
     </template>
     <template v-slot:main>
       <div class="titleBlock">

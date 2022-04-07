@@ -152,6 +152,15 @@ function linkTo (item='') {
       }
     }
   }
+  /deep/ .github-markdown-body .hljs-keyword{
+font-weight: normal;
+  }
+  /deep/ .github-markdown-body .hljs-selector-tag{
+font-weight: normal;
+  }
+  /deep/ .github-markdown-body .hljs-subst {
+    font-weight: normal;
+  }
 }
 @media (max-width: 1264px) {
   .dingwei{
