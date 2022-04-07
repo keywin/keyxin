@@ -5,7 +5,7 @@ import Container from '@/components/Container.vue'
 
 // 初始化
 const titleList = ref([
-  { title: '04 setter.md', id: 1649227458790, auth: 'keywin' },
+  { title: '04 setter.md', id: 1649301260320, auth: 'keywin' },
   { title: '03 getter.md', id: 1649227458790, auth: 'keywin' },
   { title: '01 http 和 https.md', id: 1648798751030, auth: 'keywin' },
   { title: '02 本地存储.md', id: 1649231575913, auth: 'keywin' },
@@ -32,14 +32,16 @@ titleList.value[0] && linkTo(titleList.value[0]['title'])
 <template>
   <Container>
     <template #aside>
-      <div v-for="item in titleList" :key="item.title" class="item" @click="linkTo(item.title)" :class="active === item.title && 'active'">{{ item.title }}</div>
+      <div v-for="item in titleList" :key="item.title" class="item" @click="linkTo(item.title)" :class="active === item.title && 'active'">
+        <span>{{ item.title }}</span>
+      </div>
     </template>
     <template v-slot:main>
       <div class="titleBlock">
         <div class="title">{{ titleList.filter(item => item.title === active)[0]['title'] }}</div>
         <div class="descr">
           <div class="auth">{{ titleList.filter(item => item.title === active)[0]['auth'] }}</div>
-          <div class="time">{{ $dayjs(titleList.filter(item => item.title === active)[0]['id']).format('YYYY-MM-DD HH:mm:ss') }}</div>
+          <div class="time">{{ $dayjs(titleList.filter(item => item.title === active)[0]['id']).format('YYYY-MM-DD HH:mm:ss') }} <span style="margin-left: 12px;"></span> {{ $dayjs(titleList.filter(item => item.title === active)[0]['id']).format('dddd') }}</div>
         </div>
       </div>
       <v-md-preview :text="txt"></v-md-preview>

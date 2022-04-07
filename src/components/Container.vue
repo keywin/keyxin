@@ -1,15 +1,28 @@
 <script setup lang="ts">
+import axios from 'axios'
 import { ref } from 'vue'
+
 defineProps<{ 
   msg?: string,
   asideList?: Array,
-  noData?: Boolean
+  noData?: Boolean,
+  titleList?: Array,
+  type?: String
 }>()
 
 const isShowAside = ref(false)
+const active = ref('')
 
 function isShowAsideClick() {
   isShowAside.value = !isShowAside.value
+}
+
+// 点击标题出内容
+function linkTo (item='') {
+  active.value = item
+  axios({ method:'get', url: `/md/notes/${item}`}).then(res => {
+    return res.data
+  })
 }
 </script>
 
@@ -24,6 +37,9 @@ function isShowAsideClick() {
         </main>
         <aside :class="isShowAside && 'active'">
           <div class="aside">
+            <!-- <template v-if="titleList && titleList.length > 0">
+              <div v-for="item in titleList" :key="item.title" class="item" @click="$emit('linkTo', linkTo)" :class="active === item.title && 'active'">{{ item.title }}</div>
+            </template> -->
             <slot name="aside"></slot>
           </div>
         </aside>
@@ -100,12 +116,38 @@ function isShowAsideClick() {
         z-index: 1;
       }
       /deep/ .item{
-        line-height: 32px;
-        padding: 0 12px;
-        font-size: 16px;
+        display: flex;
+        align-items: center;
+        min-height: 40px;
+        line-height: 20px;
+        padding: 5px 12px 5px;
+        font-size: 14px;
         cursor: pointer;
+        transition: all .3s;
+        span{
+          flex: 1;
+          margin-left: 0;
+          word-wrap: break-word;
+          word-break: break-all;
+          transition: all .2s;
+        }
+        &:hover{
+          color: #bcae34;
+        }
         &.active{
           color: #bcae34;
+          background: #f5f5f5;
+          border-radius: 4px;
+          span{
+            margin-left: 5px;
+          }
+        }
+        &.active:before{
+          content: '';
+          width: 3px;
+          height: 12px;
+          border-radius: 1.5px;
+          background-color: #333;
         }
       }
     }

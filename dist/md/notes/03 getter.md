@@ -1,4 +1,4 @@
-![https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/11/5/16e3adfa079451b7~tplv-t2oaga2asx-zoom-crop-mark:1304:1304:1304:734.awebp](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/11/5/16e3adfa079451b7~tplv-t2oaga2asx-zoom-crop-mark:1304:1304:1304:734.awebp)
+![https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a2967b05ad4c4f6893c0f0f6a3359587~tplv-k3u1fbpfcp-zoom-crop-mark:1304:1304:1304:734.awebp?](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a2967b05ad4c4f6893c0f0f6a3359587~tplv-k3u1fbpfcp-zoom-crop-mark:1304:1304:1304:734.awebp?)
 
 ## `getter` 将对象属性绑定到查询该属性时将调用的函数
 
