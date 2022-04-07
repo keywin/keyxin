@@ -163,6 +163,15 @@ font-weight: normal;
   /deep/ .github-markdown-body .hljs-subst {
     font-weight: normal;
   }
+  /deep/ .github-markdown-body .hljs-section{
+    font-weight: normal;
+  }
+  /deep/ .github-markdown-body .hljs-selector-id{
+    font-weight: normal;
+  }
+  /deep/ .github-markdown-body .hljs-title{
+    font-weight: normal;
+  }
 }
 @media (max-width: 1264px) {
   .dingwei{
