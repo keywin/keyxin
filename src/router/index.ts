@@ -25,6 +25,14 @@ const routes = [
         }
       },
       {
+        path: '/playground',
+        name: 'playground',
+        component: () => import('../views/playground/Index.vue'),
+        meta: {
+          title: 'playground'
+        }
+      },
+      {
         path: '/im',
         name: 'im',
         component: () => import('../views/im/Index.vue'),

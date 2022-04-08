@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 // import axios from 'axios'
 import { ref, watch, watchEffect, watchPostEffect, onMounted } from 'vue'
-import Container from '@/components/Container.vue'
-import children_ from './children_.vue'
+// import Container from '@/components/Container.vue'
+import children from './children.vue'
 
 // // 初始化
 // const x = ref(0)
@@ -16,27 +16,26 @@ import children_ from './children_.vue'
 // const list = ref([12,26,32,49,51])
 // const itemsRef = ref([])
 
-const cccccc = ref(null)
-onMounted(() => {
-  console.log(cccccc.value && cccccc.value['a'])
-  console.log(cccccc.value && cccccc.value['b'])
+// const cccccc = ref(null)
+// onMounted(() => {
+//   cccccc.value.c_a = '我改变了子组件的c_a'
+//   console.log(cccccc.value.c_a)
+// })
 
-  cccccc.value['a'] = 123
-  cccccc.value['b'] = 'iii'
+// function txtClick(e) {
+//   console.log(e)
+// }
 
-  console.log(cccccc.value && cccccc.value['a'])
-  console.log(cccccc.value && cccccc.value['b'])
-})
 </script>
 
 <template>
-  <children_ ref="cccccc"></children_>
+  <children title="zzz标题"></children>
 <!-- <button @click="_watch()">停止监听</button> -->
   <!-- <input v-model="x" type="number"> -->
   <!-- <input v-model="y" type="number"> -->
   <!-- {{ z }} -->
   <!-- <li v-for="item in list" ref="itemsRef">{{ item }}</li> -->
-  <Container :noData="true"></Container>
+  <!-- <Container :noData="true"></Container> -->
 </template>
 
 <style scoped lang="less">

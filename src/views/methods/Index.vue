@@ -51,7 +51,6 @@ titleList.value[0] && linkTo(titleList.value[0]['title'])
         </div>
       </div>
       <v-md-preview :text="txt"></v-md-preview>
-      <iframe src="https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHNjcmlwdCBzZXR1cD5cbmltcG9ydCB7IHJlZiwgd2F0Y2ggfSBmcm9tICd2dWUnXG5cbmNvbnN0IHggPSByZWYoMClcbmNvbnN0IHkgPSByZWYoMClcblxud2F0Y2goXG4gICgpID0+IHgudmFsdWUgKyB5LnZhbHVlLFxuICAoc3VtKSA9PiB7XG4gICAgY29uc29sZS5sb2coYHN1bSBvZiB4ICsgeSBpczogJHtzdW19YClcbiAgfVxuKVxuPC9zY3JpcHQ+XG5cbjx0ZW1wbGF0ZT5cbiAgPHA+XG4gICAgQXNrIGEgeWVzL25vIHF1ZXN0aW9uOlxuICAgIDxpbnB1dCB0eXBlPVwibnVtYmVyXCIgdi1tb2RlbD1cInhcIiAvPlxuICAgIDxpbnB1dCB0eXBlPVwibnVtYmVyXCIgdi1tb2RlbD1cInlcIiAvPlxuICA8L3A+XG4gIDxwPnt7IHggfX08L3A+XG48L3RlbXBsYXRlPiIsImltcG9ydC1tYXAuanNvbiI6IntcbiAgXCJpbXBvcnRzXCI6IHtcbiAgICBcInZ1ZVwiOiBcImh0dHBzOi8vc2ZjLnZ1ZWpzLm9yZy92dWUucnVudGltZS5lc20tYnJvd3Nlci5qc1wiXG4gIH1cbn0ifQ==" frameborder="0" width="100%" height="600px" style="margin-bottom: 20px"></iframe>
     </template>
   </Container>
 </template>

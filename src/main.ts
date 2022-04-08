@@ -30,5 +30,8 @@ app.use(VMdPreview);
 
 app.config.globalProperties.$dayjs = dayjs
 
+// 自定义指令-域外点击
+// app.directive("click-outside")
+
 
 app.mount('#app')

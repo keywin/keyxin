@@ -5,6 +5,7 @@ import Container from '@/components/Container.vue'
 
 // 初始化
 const titleList = ref([
+  { title: '07 组件通信.md', id: 1649409542203, auth: 'keywin' },
   { title: '06 vue3-模板ref.md', id: 1649327576915, auth: 'keywin' },
   { title: '05 vue3-watch.md', id: 1649319949012, auth: 'keywin' },
   { title: '04 setter.md', id: 1649301260320, auth: 'keywin' },
@@ -54,7 +55,6 @@ titleList.value[0] && linkTo(titleList.value[0]['title'])
         </div>
       </div>
       <v-md-preview :text="txt"></v-md-preview>
-      <iframe src="https://sfc.vuejs.org/#" frameborder="0" style="margin-bottom: 20px;" width="100%" height="600px" id="iframe"></iframe>
     </template>
   </Container>
 </template>
