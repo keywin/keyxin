@@ -76,8 +76,8 @@ body {
 @media (min-width: 960px) {
   /*chrome滚动条样式*/
   ::-webkit-scrollbar {
-    height: 8px;
-    width: 8px;
+    height: 5px;
+    width: 5px;
     background: rgba(222, 222, 222, 0.5);
     transition: all 0.3s ease-in-out;
     border-radius: 5px;

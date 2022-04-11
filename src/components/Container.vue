@@ -106,6 +106,7 @@ function linkTo (item='') {
       position: absolute;
       top: 0;
       right: 0;
+      user-select:none;
       .aside{
         position: fixed;
         top: 20px;

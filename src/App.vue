@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 import { ref, computed, watch } from 'vue'
 
-import { Repl, ReplStore } from '@vue/repl'
+// import { Repl, ReplStore } from '@vue/repl'
 
 // const list = ref(['张三', '李四', '王五', '刘心心'])
 // const txt = ref('<p>这是库里面存的带标签的文本这是库里面存的带标签的文本这是库里面存的带标签的文本这是库里面存的带标签的文本这是库里面存的带标签的文本</p>')
