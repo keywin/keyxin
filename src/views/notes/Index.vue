@@ -5,9 +5,9 @@ import Container from '@/components/Container.vue'
 
 // 初始化
 const titleList = ref([
-  { title: '10 透传.md', id: 1649409542203, auth: 'keywin' },
-  { title: '09 组件通信-修饰符.md', id: 1649409542203, auth: 'keywin' },
-  { title: '08 组件通信-子传父.md', id: 1649409542203, auth: 'keywin' },
+  { title: '10 透传.md', id: 1649669905000, auth: 'keywin' },
+  { title: '09 组件通信-修饰符.md', id: 1649664021000, auth: 'keywin' },
+  { title: '08 组件通信-子传父.md', id: 1649409526000, auth: 'keywin' },
   { title: '07 组件通信-父传子.md', id: 1649409542203, auth: 'keywin' },
   { title: '06 vue3-模板ref.md', id: 1649327576915, auth: 'keywin' },
   { title: '05 vue3-watch.md', id: 1649319949012, auth: 'keywin' },
