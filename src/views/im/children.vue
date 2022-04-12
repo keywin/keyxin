@@ -6,6 +6,7 @@ export default {
 </script>
 
 <script setup>
+import children from './son.vue'
 import { useAttrs } from 'vue'
 
 const attrs = useAttrs()
@@ -22,6 +23,7 @@ function ccc () {
 </script>
 
 <template>
+<children></children>
   <div @click="bbb(1)" class="a">
     <button @click="ccc()">{{ title }}</button>
     {{ $attrs }}

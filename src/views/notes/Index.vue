@@ -5,17 +5,20 @@ import Container from '@/components/Container.vue'
 
 // 初始化
 const titleList = ref([
-  { title: '11 插槽slot.md', id: 1649733090330, auth: 'keywin' },
-  { title: '10 透传.md', id: 1649669905000, auth: 'keywin' },
-  { title: '09 组件通信-修饰符.md', id: 1649664021000, auth: 'keywin' },
-  { title: '08 组件通信-子传父.md', id: 1649409526000, auth: 'keywin' },
-  { title: '07 组件通信-父传子.md', id: 1649409542203, auth: 'keywin' },
-  { title: '06 vue3-模板ref.md', id: 1649327576915, auth: 'keywin' },
-  { title: '05 vue3-watch.md', id: 1649319949012, auth: 'keywin' },
-  { title: '04 setter.md', id: 1649301260320, auth: 'keywin' },
-  { title: '03 getter.md', id: 1649227458790, auth: 'keywin' },
-  { title: '02 本地存储.md', id: 1649231575913, auth: 'keywin' },
-  { title: '01 http 和 https.md', id: 1648798751030, auth: 'keywin' },
+  { title: '14 组合式函数-封装复用', id: 1649755156432, auth: 'keywin' },
+  { title: '13 异步组件搞懂再写', id: 1649743644480, auth: 'keywin' },
+  { title: '12 依赖注入provide和inject', id: 1649743644480, auth: 'keywin' },
+  { title: '11 插槽slot', id: 1649733090330, auth: 'keywin' },
+  { title: '10 透传', id: 1649669905000, auth: 'keywin' },
+  { title: '09 组件通信-修饰符', id: 1649664021000, auth: 'keywin' },
+  { title: '08 组件通信-子传父', id: 1649409526000, auth: 'keywin' },
+  { title: '07 组件通信-父传子', id: 1649409542203, auth: 'keywin' },
+  { title: '06 vue3-模板ref', id: 1649327576915, auth: 'keywin' },
+  { title: '05 vue3-watch', id: 1649319949012, auth: 'keywin' },
+  { title: '04 setter', id: 1649301260320, auth: 'keywin' },
+  { title: '03 getter', id: 1649227458790, auth: 'keywin' },
+  { title: '02 本地存储', id: 1649231575913, auth: 'keywin' },
+  { title: '01 http 和 https', id: 1648798751030, auth: 'keywin' },
   
 ])
 const txt = ref('')
@@ -27,7 +30,7 @@ const active = ref('')
 // 点击标题出内容
 function linkTo (item='') {
   active.value = item
-  axios({ method:'get', url: `/md/notes/${item}`}).then(res => {
+  axios({ method:'get', url: `/md/notes/${item}.md`}).then(res => {
     txt.value = res.data
   })
 }

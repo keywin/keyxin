@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 // import axios from 'axios'
-import { ref, watch, watchEffect, watchPostEffect, onMounted } from 'vue'
+import { ref, watch, watchEffect, watchPostEffect, onMounted, provide } from 'vue'
 // import Container from '@/components/Container.vue'
 import children from './children.vue'
 
@@ -32,9 +32,19 @@ function aaa () {
 function s () {
   console.log(99999)
 }
+
+const IM_name = ref('')
+function update_IM_name () {
+  IM_name.value = '值变了!!!'
+}
+provide('foo', {
+  IM_name,
+  update_IM_name
+})
 </script>
 
 <template>
+<input v-model="IM_name" />{{ IM_name }}
   <children title="zzz标题" class="a" style="background: green;">
     <div @click="s()">asdjkasfhsdafkjsd</div>
     {{ z }}

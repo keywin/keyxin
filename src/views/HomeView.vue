@@ -1,9 +1,29 @@
 <script setup lang="ts">
 import Header from '@/views/layout/Header.vue'
 import Nav from '@/views/layout/Nav.vue'
+
+import axios from 'axios'
+import { defineAsyncComponent } from 'vue'
+
+
+
+const AsyncComp = defineAsyncComponent(() => {
+  return new Promise((resolve, reject) => {
+    axios({ method:'get', url: `~@/views/notes/Index.vue`}).then(res => {
+      resolve(res)
+    })
+    // ...从服务器获取组件
+  })
+})
+
+console.log(AsyncComp)
+// const AsyncComp = defineAsyncComponent(() => {
+//   import('https://github.com/keywin/keyxin/blob/main/src/views/im/Index.vue')
+// })
 </script>
 
 <template>
+<async-comp></async-comp>
   <main>
     <Nav></Nav>
     <!-- <Transition> -->
