@@ -5,6 +5,7 @@ import Container from '@/components/Container.vue'
 
 // 初始化
 const titleList = ref([
+  { title: '11 插槽slot.md', id: 1649733090330, auth: 'keywin' },
   { title: '10 透传.md', id: 1649669905000, auth: 'keywin' },
   { title: '09 组件通信-修饰符.md', id: 1649664021000, auth: 'keywin' },
   { title: '08 组件通信-子传父.md', id: 1649409526000, auth: 'keywin' },

@@ -39,6 +39,9 @@ main{
 @media (max-width: 1024px) {
   main{
     flex-direction: column;
+    .main{
+      overflow-y: auto;
+    }
   }
 }
 </style>

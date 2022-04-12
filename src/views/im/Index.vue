@@ -7,7 +7,7 @@ import children from './children.vue'
 // // 初始化
 // const x = ref(0)
 // const y = ref(0)
-// const z = ref('init')
+const z = ref('init')
 
 // let _watch = watch(x, (nv, ov) => {
 //   console.log(nv, ov)
@@ -25,11 +25,20 @@ import children from './children.vue'
 // function txtClick(e) {
 //   console.log(e)
 // }
+function aaa () {
+  console.log(2)
+}
 
+function s () {
+  console.log(99999)
+}
 </script>
 
 <template>
-  <children title="zzz标题"></children>
+  <children title="zzz标题" class="a" style="background: green;">
+    <div @click="s()">asdjkasfhsdafkjsd</div>
+    {{ z }}
+  </children>
 <!-- <button @click="_watch()">停止监听</button> -->
   <!-- <input v-model="x" type="number"> -->
   <!-- <input v-model="y" type="number"> -->
@@ -42,4 +51,9 @@ import children from './children.vue'
 .im{
   display: flex;
 }
+.a{
+  background: red;
+}
 </style>
+
+#### 子组件没有跟节点, 需要指定 v-bind="$attrs"

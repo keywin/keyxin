@@ -36,11 +36,13 @@ function linkTo (item='') {
           <slot name="main"></slot>
         </main>
         <aside :class="isShowAside && 'active'">
-          <div class="aside">
+          <div class="aside" @click="isShowAside = false">
             <!-- <template v-if="titleList && titleList.length > 0">
               <div v-for="item in titleList" :key="item.title" class="item" @click="$emit('linkTo', linkTo)" :class="active === item.title && 'active'">{{ item.title }}</div>
             </template> -->
-            <slot name="aside"></slot>
+            <div class="aside-cont">
+              <slot name="aside"></slot>
+            </div>
           </div>
         </aside>
       </template>
@@ -196,10 +198,20 @@ font-weight: normal;
     right: -300px !important;
     transition: right .3s;
     .aside{
+      width: 100% !important;
       height: 100vh;
       max-height: 100vh !important;
+      padding: 0 !important;
       top: 0 !important;
       box-shadow: 0 8px 10px -5px rgb(0 0 0 / 20%), 0 16px 24px 2px rgb(0 0 0 / 14%), 0 6px 30px 5px rgb(0 0 0 / 12%);
+      background: rgba(0,0,0,.3) !important;
+      .aside-cont{
+        width: 200px;
+        height: 100vh;
+        float: right;
+        background: #fff;
+        overflow-y: auto;
+      }
     }
   }
   aside.active{
