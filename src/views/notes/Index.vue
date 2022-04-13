@@ -5,6 +5,7 @@ import Container from '@/components/Container.vue'
 
 // 初始化
 const titleList = ref([
+  { title: '15 git问题记录', id: 1649835660609, auth: 'keywin' },
   { title: '14 组合式函数-封装复用', id: 1649755156432, auth: 'keywin' },
   { title: '13 异步组件搞懂再写', id: 1649743644480, auth: 'keywin' },
   { title: '12 依赖注入provide和inject', id: 1649743644480, auth: 'keywin' },
@@ -33,6 +34,8 @@ function linkTo (item='') {
   axios({ method:'get', url: `/md/notes/${item}.md`}).then(res => {
     txt.value = res.data
   })
+  let dom = document.querySelector('.Container')
+  dom?.scrollTo(0, 0)
 }
 
 titleList.value[0] && linkTo(titleList.value[0]['title'])
