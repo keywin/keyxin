@@ -39,6 +39,14 @@ const routes = [
         meta: {
           title: 'Im'
         }
+      },
+      {
+        path: '/good',
+        name: 'good',
+        component: () => import('../views/good/Index.vue'),
+        meta: {
+          title: '典藏'
+        }
       }
     ]
   }
