@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Header from '@/views/layout/Header.vue'
 import Nav from '@/views/layout/Nav.vue'
 
 import axios from 'axios'
