@@ -5,7 +5,8 @@ import { ref } from 'vue'
 
 // 初始化
 const titleList = ref([
-  { title: '前端代码的三种设计模式', id: 1649991176864, uri: 'https://juejin.cn/post/7081147167653494797' }
+  { title: '前端代码的三种设计模式', id: 1649991176864, uri: 'https://juejin.cn/post/7081147167653494797' },
+  { title: 'OAuth2.0授权机制', id: 1649992995496, uri: 'https://www.ruanyifeng.com/blog/2019/04/oauth-grant-types.html' },
 ])
 const txt = ref('')
 const active = ref('')
