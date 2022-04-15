@@ -13,9 +13,12 @@ const active = ref('')
 
 // 点击标题出内容
 function linkTo (id) {
-  active.value = id
-  let dom = document.querySelector('.Container')
-  dom?.scrollTo(0, 0)
+  active.value = ''
+  setTimeout(() => {
+    active.value = id
+    let dom = document.querySelector('.Container')
+    dom?.scrollTo(0, 0)
+  }, 100);
 }
 
 titleList.value[0] && linkTo(titleList.value[0]['id'])
@@ -29,7 +32,7 @@ titleList.value[0] && linkTo(titleList.value[0]['id'])
       </div>
     </template>
     <template v-slot:main>
-      <iframe :src="titleList.filter(item => item.id === active)[0]['uri']" frameborder="0" width="100%" height="100%" id="iframe"></iframe>
+      <iframe :src="titleList.filter(item => item.id === active)[0]['uri']" frameborder="0" width="100%" height="100%" id="iframe" v-if="txt"></iframe>
     </template>
   </Container>
 </template>
